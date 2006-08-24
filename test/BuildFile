@@ -1,0 +1,12 @@
+<use name=FWCore/ParameterSet>
+<use name=CondFormats/DTObjects>
+<use name=CondCore/DBCommon>
+<use name=CondCore/IOVService>
+<use name=CondCore/MetaDataService>
+<use name=FWCore/Framework>	
+<use name=DataFormats/MuonDetId>
+<bin file=testWriteDTMap.cpp></bin>
+<bin file=testWriteDTT0.cpp></bin>
+<bin file=testWriteDTTtrig.cpp></bin>
+
+
