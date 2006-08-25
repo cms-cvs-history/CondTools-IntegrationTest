@@ -5,8 +5,8 @@
 <use name=CondCore/MetaDataService>
 <use name=FWCore/Framework>	
 <use name=DataFormats/MuonDetId>
-<bin file=testWriteDTMap.cpp></bin>
-<bin file=testWriteDTT0.cpp></bin>
-<bin file=testWriteDTTtrig.cpp></bin>
+<bin file=validateWriteDTMap.cpp></bin>
+<bin file=validateWriteDTT0.cpp></bin>
+<bin file=validateWriteDTTtrig.cpp></bin>
 
 
