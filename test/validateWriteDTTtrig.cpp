@@ -24,13 +24,13 @@ int main(){
   try{
     std::cout << "01 " << std::endl;
     cond::DBSession* session1 =
-          new cond::DBSession( std::string( "oracle://devdb10/CMS_COND_DT" ) );
+          new cond::DBSession( std::string( "oracle://orcon/CMS_COND_DT" ) );
     std::cout << "02  " << std::endl;
-    session1->setCatalog( "relationalcatalog_oracle://devdb10/CMS_COND_GENERAL" );
+    session1->setCatalog( "relationalcatalog_oracle://orcon/CMS_COND_GENERAL" );
     std::cout << "03 " << std::endl;
     session1->connect( cond::ReadWriteCreate );
     std::cout << "04 " << std::endl;
-    cond::DBWriter pwriter( *session1, "DTTrig" );
+    cond::DBWriter pwriter( *session1, "DTTtrig" );
     std::cout << "05 " << std::endl;
     cond::DBWriter iovwriter( *session1, "cond::IOV" );
     std::cout << "06 " << std::endl;
@@ -73,7 +73,7 @@ int main(){
     session1->commit();//commit all in one
     session1->disconnect();
     delete session1;
-    cond::MetaData metadata_svc( "oracle://devdb10/CMS_COND_DT", *loader );
+    cond::MetaData metadata_svc( "oracle://orcon/CMS_COND_DT", *loader );
     metadata_svc.connect();
     metadata_svc.addMapping( "MTCC_tTrig", tTrigiovToken );
     metadata_svc.disconnect();
